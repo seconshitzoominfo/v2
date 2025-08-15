@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File Loader</title>
+</head>
+<body>
+  <h1>File Viewer</h1>
+  <div id="output"></div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
+    if (file) {
+      document.getElementById('output').innerText = `File: ${file}`;
+      // Add logic to actually fetch/display the file if desired
+    } else {
+      document.getElementById('output').innerText = "No file specified.";
+    }
+  </script>
+</body>
+</html>
